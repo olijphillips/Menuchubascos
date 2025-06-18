@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú del Restaurante</title>
+    <title>Menú Chubascos</title>
     <style>
         body {
-            background: #f6f7fb;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+            min-height: 100vh;
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
         .menu-container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 40px auto;
             background: #fff;
-            border-radius: 16px;
+            border-radius: 24px;
             box-shadow: 0 8px 32px rgba(60, 60, 100, 0.12);
             padding: 32px 24px;
         }
@@ -33,8 +34,16 @@
         h1 {
             text-align: center;
             color: #2d3142;
-            margin-bottom: 32px;
+            margin-bottom: 8px;
             letter-spacing: 2px;
+            font-size: 2.1rem;
+        }
+
+        .horario {
+            text-align: center;
+            color: #4f8a8b;
+            margin-bottom: 32px;
+            font-size: 1.1rem;
         }
 
         h2 {
@@ -50,43 +59,43 @@
         .menu-item {
             display: flex;
             align-items: flex-start;
-            padding: 18px 0;
+            padding: 14px 0;
             border-bottom: 1px solid #ececec;
+            background: rgba(248, 250, 252, 0.7);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            transition: box-shadow 0.2s;
         }
 
         .menu-item:last-child {
             border-bottom: none;
         }
 
-        .item-img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-right: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        .menu-item:hover {
+            box-shadow: 0 4px 16px rgba(79, 138, 139, 0.08);
+            background: rgba(248, 250, 252, 1);
         }
 
         .item-info {
             flex: 1;
-            max-width: 70%;
+            max-width: 80%;
         }
 
         .item-title {
-            font-size: 1.15rem;
+            font-size: 1.08rem;
             font-weight: 600;
             color: #22223b;
-            margin: 0 0 6px 0;
+            margin: 0 0 4px 0;
         }
 
         .item-desc {
-            font-size: 0.98rem;
+            font-size: 0.97rem;
             color: #6c757d;
             margin: 0;
         }
 
         .item-price {
-            font-size: 1.1rem;
+            font-size: 1.08rem;
             font-weight: 700;
             color: #4f8a8b;
             margin-left: 20px;
@@ -96,18 +105,12 @@
 
         @media (max-width: 600px) {
             .menu-container {
-                padding: 16px 4px;
+                padding: 12px 2px;
             }
 
             .menu-item {
                 flex-direction: column;
                 align-items: stretch;
-            }
-
-            .item-img {
-                margin: 0 0 12px 0;
-                width: 100%;
-                height: 140px;
             }
 
             .item-price {
@@ -122,68 +125,706 @@
     <div class="menu-container">
         <img src="./imagenes/Logo principal492520131_9771870666184851_4442269359777179421_n.jpg"
             alt="Logotipo del Restaurante" class="logo">
-        <h1>Menú del Restaurante</h1>
+        <h1>Menú Chubascos</h1>
+        <div class="horario"><b>Desayuno en Chubascos</b><br>Horario: Todos los días de 8:00 a.m. a 11:00 a.m.</div>
 
-        <h2>Entradas</h2>
+        <h2>Jugos y Batidos Naturales</h2>
         <div class="menu-item">
-            <img src="./imagenes/502141013_122124399752840986_1270948727448642106_n.jpg" alt="Ensalada César"
-                class="item-img">
             <div class="item-info">
-                <div class="item-title">Ensalada César</div>
-                <div class="item-desc">Lechuga fresca, pollo a la parrilla, crutones y aderezo César.</div>
+                <div class="item-title">Naranja</div>
+                <div class="item-desc">Jugos de naranja tradicional</div>
             </div>
-            <div class="item-price">₡8,500</div>
+            <div class="item-price">₡2.850</div>
         </div>
         <div class="menu-item">
-            <img src="./imagenes/492903336_122117420762840986_1225132049808626708_n.jpg" alt="Tarta de Queso"
-                class="item-img">
             <div class="item-info">
-                <div class="item-title">Tarta de Queso</div>
-                <div class="item-desc">Clásica tarta de queso con base de galleta y coulis de frutos rojos.</div>
+                <div class="item-title">Buenos días</div>
+                <div class="item-desc">Naranja con zanahoria y manzana</div>
             </div>
-            <div class="item-price">₡6,000</div>
+            <div class="item-price">₡2.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Piña Verde</div>
+                <div class="item-desc">Naranja, piña, apio, espinaca y pepino</div>
+            </div>
+            <div class="item-price">₡2.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Narangético</div>
+                <div class="item-desc">Jugos de naranjas con jengibre y miel de abejas</div>
+            </div>
+            <div class="item-price">₡2.850</div>
         </div>
 
-        <h2>Platos principales</h2>
+        <h2>Bebidas Calientes</h2>
         <div class="menu-item">
-            <img src="./imagenes/502141013_122124399752840986_1270948727448642106_n.jpg" alt="Pasta Alfredo"
-                class="item-img">
             <div class="item-info">
-                <div class="item-title">Pasta Alfredo</div>
-                <div class="item-desc">Pasta fettuccine en salsa cremosa de queso parmesano.</div>
+                <div class="item-title">Café negro, aguadulce, variedad de tés e infusiones</div>
             </div>
-            <div class="item-price">₡1,200</div>
+            <div class="item-price">₡1.550</div>
         </div>
         <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80"
-                alt="Hamburguesa Gourmet" class="item-img">
             <div class="item-info">
-                <div class="item-title">Hamburguesa Gourmet</div>
-                <div class="item-desc">Carne Angus, queso cheddar, cebolla caramelizada y pan artesanal.</div>
+                <div class="item-title">Café con leche, aguadulce en leche, tés en leche</div>
             </div>
-            <div class="item-price">₡1,075</div>
+            <div class="item-price">₡1.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Chocolate caliente</div>
+            </div>
+            <div class="item-price">₡3.200</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Capuccino</div>
+            </div>
+            <div class="item-price">₡3.200</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Capuccino Moka</div>
+            </div>
+            <div class="item-price">₡3.200</div>
+        </div>
+
+        <h2>Entradas y Antojos</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Fresas frescas con yogurt, granola y miel de abeja</div>
+            </div>
+            <div class="item-price">₡3.200</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Arepas tradicionales</div>
+            </div>
+            <div class="item-price">₡3.800</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Palitos de queso fritos</div>
+            </div>
+            <div class="item-price">₡5.000</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Pancito caliente</div>
+            </div>
+            <div class="item-price">₡1.600</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Prensaditas de queso palmito</div>
+            </div>
+            <div class="item-price">₡2.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Frijolitos molidos con tortillas</div>
+            </div>
+            <div class="item-price">₡2.800</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Tamal de maicena y pasas</div>
+            </div>
+            <div class="item-price">₡1.800</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Queque de ayote o choco-banano</div>
+            </div>
+            <div class="item-price">₡2.800</div>
         </div>
 
         <h2>Bebidas</h2>
         <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80"
-                alt="Jugo Natural" class="item-img">
             <div class="item-info">
-                <div class="item-title">Jugo Natural</div>
-                <div class="item-desc">Jugo de frutas naturales a elección: naranja, piña o fresa.</div>
+                <div class="item-title">Cerveza Nacional Imperial (Silver, Ultra)</div>
             </div>
-            <div class="item-price">₡1,700</div>
+            <div class="item-price">₡2.250</div>
         </div>
         <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
-                alt="Café" class="item-img">
             <div class="item-info">
-                <div class="item-title">Café</div>
-                <div class="item-desc">Café recién hecho, servido caliente o frío.</div>
+                <div class="item-title">Cerveza Premium Bavaria (Original, Light)</div>
             </div>
-            <div class="item-price">₡1,200</div>
+            <div class="item-price">₡2.350</div>
         </div>
-    </div>
-</body>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Micheladas Imperial (Fresa, clásica, chile, guaro)</div>
+            </div>
+            <div class="item-price">₡3.250</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">El guaro de nance</div>
+            </div>
+            <div class="item-price">₡2.250</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">La Sangría de la casa (Tinta o Blanca)</div>
+            </div>
+            <div class="item-price">₡5.500</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Cocteles Preparados Adán y Eva (Frutos Rojos)</div>
+            </div>
+            <div class="item-price">₡3.100</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Chile - Guaro</div>
+            </div>
+            <div class="item-price">₡1.600</div>
+        </div>
 
-</html>
+        <h2>Bebidas Calientes (Especiales)</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Café negro</div>
+            </div>
+            <div class="item-price">₡1.600</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Café con leche</div>
+            </div>
+            <div class="item-price">₡1.900</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Capuccino</div>
+            </div>
+            <div class="item-price">₡3.250</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Capuccino Moka</div>
+            </div>
+            <div class="item-price">₡3.300</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Chocolate</div>
+            </div>
+            <div class="item-price">₡3.250</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Chocolate con licor de cacao</div>
+            </div>
+            <div class="item-price">₡4.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Aguadulce Bautizada (con ron, canela y limón)</div>
+            </div>
+            <div class="item-price">₡3.650</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Aguadulce negra</div>
+            </div>
+            <div class="item-price">₡1.650</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Aguadulce con leche</div>
+            </div>
+            <div class="item-price">₡1.900</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">El carajillo</div>
+            </div>
+            <div class="item-price">₡3.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Té e infusiones digestivas</div>
+            </div>
+            <div class="item-price">₡1.550</div>
+        </div>
+
+        <h2>Entraditas</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Aliñaditas de verduras con guacamole</div>
+            </div>
+            <div class="item-price">₡3.550</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Empanadas de plátano maduro</div>
+            </div>
+            <div class="item-price">₡1.900</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Yuca frita crujiente</div>
+            </div>
+            <div class="item-price">₡2.750</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Empanaditas de masa de maíz</div>
+            </div>
+            <div class="item-price">₡3.750</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Sopita de zapallo y maíz con leche y huevito</div>
+            </div>
+            <div class="item-price">₡3.500</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Tortillitas palmeadas con frijolitos maleriados</div>
+            </div>
+            <div class="item-price">₡3.800</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Patacones con frijolitos maleriados y guacamole</div>
+            </div>
+            <div class="item-price">₡5.250</div>
+        </div>
+
+        <h2>Canasta de chicharrones</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Guacamole rústico</div>
+            </div>
+            <div class="item-price">₡6.500</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Plátano maduro entero</div>
+            </div>
+            <div class="item-price">₡2.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Prensaditas</div>
+            </div>
+            <div class="item-price">₡2.850</div>
+        </div>
+
+        <h2>Tortillas Aliñadas</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Clásica</div>
+            </div>
+            <div class="item-price">₡4.900</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Con natilla</div>
+            </div>
+            <div class="item-price">₡5.500</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Con extra queso fresco</div>
+            </div>
+            <div class="item-price">₡6.300</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Cuatro quesos</div>
+            </div>
+            <div class="item-price">₡7.200</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Aliñada de ayote con natilla</div>
+            </div>
+            <div class="item-price">₡5.500</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Chorreadas</div>
+            </div>
+            <div class="item-price">₡4.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Chorreadas con natilla</div>
+            </div>
+            <div class="item-price">₡5.500</div>
+        </div>
+
+        <h2>Los Gallitos</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">10 gallitos variados</div>
+            </div>
+            <div class="item-price">₡22.500</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">10 gallitos de pura carne</div>
+            </div>
+            <div class="item-price">₡26.000</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">10 gallitos vegetarianos o veganos</div>
+            </div>
+            <div class="item-price">₡15.000</div>
+        </div>
+
+        <h2>Gallitos Solitos</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Lomito de res</div>
+            </div>
+            <div class="item-price">₡7.200</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Lengua en salsa</div>
+            </div>
+            <div class="item-price">₡6.500</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Chorizo</div>
+            </div>
+            <div class="item-price">₡3.500</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Salchichón</div>
+            </div>
+            <div class="item-price">₡1.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Carne mechada de res</div>
+            </div>
+            <div class="item-price">₡3.750</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Tortita de carne arreglada</div>
+            </div>
+            <div class="item-price">₡2.950</div>
+        </div>
+
+        <h2>Picadillos Veganos</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Papa</div>
+            </div>
+            <div class="item-price">₡2.950</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Chayote con maíz y culantro</div>
+            </div>
+            <div class="item-price">₡2.950</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Vainicas con zanahoria</div>
+            </div>
+            <div class="item-price">₡2.950</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Elotes</div>
+            </div>
+            <div class="item-price">₡2.850</div>
+        </div>
+
+        <h2>Picadillo de Fiesta</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Picadillo de fiesta</div>
+            </div>
+            <div class="item-price">₡3.600</div>
+        </div>
+
+        <h2>Platos Fuertes</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">El arroz con pollo</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Lengua en salsa de tomates</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Chile relleno de carne de res y cerdo</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">El lomito de res</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">El Gallote Chubaseos</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">La Chuleta con chimichurri</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">La pechuga de pollo a la plancha o empanizada</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Media pechuguita</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">¡Qué tortón!</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Fajitas de lomito de cerdo con jalapeños</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+
+        <h2>Sopas y Ensaladas</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Sopita negra full extras</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Olla de Carne</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Sopa de Chiles dulces y tomates</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Garbanzos con costilla de cerdo y chorizo</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">La crema de ayote</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Ensalada de pollo con aguacate</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Ensalada arco iris</div>
+            </div>
+            <div class="item-price">₡-</div>
+        </div>
+
+        <h2>Cocteles</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Sour de Albahaca</div>
+            </div>
+            <div class="item-price">₡5.500</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Highbolito de Fresas y Pimienta Rosa</div>
+            </div>
+            <div class="item-price">₡6.200</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Limonada con Piquete</div>
+            </div>
+            <div class="item-price">₡5.200</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">La de Piña</div>
+            </div>
+            <div class="item-price">₡5.600</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">¡Vamos por Tamarindo!</div>
+            </div>
+            <div class="item-price">₡4.200</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Cas y Casi</div>
+            </div>
+            <div class="item-price">₡5.200</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Ticomule</div>
+            </div>
+            <div class="item-price">₡4.400</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">La Mascarada</div>
+            </div>
+            <div class="item-price">₡5.100</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Oro Tina</div>
+            </div>
+            <div class="item-price">₡5.200</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Martini de Guanábana</div>
+            </div>
+            <div class="item-price">₡5.800</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Tico Fashioned</div>
+            </div>
+            <div class="item-price">₡5.900</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">La Cura</div>
+            </div>
+            <div class="item-price">₡5.800</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">El Yodito</div>
+            </div>
+            <div class="item-price">₡5.600</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Manzanilla</div>
+            </div>
+            <div class="item-price">₡5.600</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Zacate de Mi Corazón</div>
+            </div>
+            <div class="item-price">₡5.900</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">La Fresada</div>
+            </div>
+            <div class="item-price">₡6.200</div>
+        </div>
+
+        <h2>Postres</h2>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">El Cheesecake</div>
+            </div>
+            <div class="item-price">₡5.300</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">El Cheesecake de cajeta de coco</div>
+            </div>
+            <div class="item-price">₡5.300</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">El pastel rústico de manzanas con pasas</div>
+            </div>
+            <div class="item-price">₡4.500</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Miel de ayote</div>
+            </div>
+            <div class="item-price">₡2.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Arroz con leche</div>
+            </div>
+            <div class="item-price">₡2.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Ensalada de frutas con helado y gelatina</div>
+            </div>
+            <div class="item-price">₡5.970</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Tamal de maicena con pasas</div>
+            </div>
+            <div class="item-price">₡1.850</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Queque de ayote con nueces y dátiles</div>
+            </div>
+            <div class="item-price">₡3.600</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Queque de banano con chispas de chocolate</div>
+            </div>
+            <div class="item-price">₡2.950</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Cono de helados de sorbetera</div>
+            </div>
+            <div class="item-price">₡2.750</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Fresas frescas con leche condensada</div>
+            </div>
+            <div class="item-price">₡3.550</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">Copo</div>
+            </div>
+            <div class="item-price">₡2.850</div>
