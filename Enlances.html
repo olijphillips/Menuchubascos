@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reverse Name</title>
+</head>
+
+<body>
+    <h1>Reverse Name</h1>
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput" value="Olivier"><br><br>
+    <button onclick="reverseName()">Reverse</button>
+    <p id="reversedName"></p>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function reverseName() {
+            const name = document.getElementById("nameInput").value;
+            const reversedName = name.split("").reverse().join("");
+            document.getElementById("reversedName").textContent = "Reversed Name: " + reversedName;
+        }
+    </script>
+</body>
+
+</html>
